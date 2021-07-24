@@ -38,7 +38,7 @@
                   <Font name="Monospaced Italic" size="15.0" />
                </font>
             </Label>
-            <JFXTextField focusColor="#fa2c56" layoutX="160.0" layoutY="149.0" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.rightAnchor="15.0" />
+            <JFXTextField fx:id="nombreCrearC" focusColor="#fa2c56" layoutX="160.0" layoutY="149.0" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.rightAnchor="15.0" />
             <JFXButton layoutX="210.0" layoutY="194.0" style="-fx-background-color: White;" text="Crear Cuenta" AnchorPane.rightAnchor="15.0" />
             <Separator layoutX="15.0" layoutY="257.0" prefHeight="1.0" prefWidth="283.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
             <Label layoutX="15.0" layoutY="239.0" text="Cancelar Cuenta" textFill="#fa2c56" AnchorPane.leftAnchor="15.0">
@@ -51,7 +51,7 @@
                   <Font name="Monospaced Italic" size="15.0" />
                </font>
             </Label>
-            <JFXTextField focusColor="#fa2c56" layoutX="22.0" layoutY="313.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite el numero de la cuenta" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <JFXTextField fx:id="numeroCancelarC" focusColor="#fa2c56" layoutX="22.0" layoutY="313.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite el numero de la cuenta" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
             <JFXButton layoutX="192.0" layoutY="356.0" style="-fx-background-color: White;" text="Cancelar Cuenta" AnchorPane.rightAnchor="15.0" />
          </children>
       </AnchorPane>
@@ -76,7 +76,7 @@
                   <Font name="Monospaced Italic" size="15.0" />
                </font>
             </Label>
-            <JFXTextField focusColor="#fa2c56" layoutX="15.0" layoutY="138.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite el numero de la cuenta" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <JFXTextField fx:id="numeroCrearCB" focusColor="#fa2c56" layoutX="15.0" layoutY="138.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite el numero de la cuenta" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
             <JFXButton layoutX="209.0" layoutY="177.0" style="-fx-background-color: White;" text="Crear Bolsillo" AnchorPane.rightAnchor="15.0" />
             <Label layoutX="22.0" layoutY="241.0" text="Cancelar Bolsillo" textFill="#fa2c56" AnchorPane.leftAnchor="15.0">
                <font>
@@ -90,7 +90,7 @@
             </Label>
             <Separator layoutX="16.0" layoutY="260.0" prefHeight="1.0" prefWidth="283.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
             <JFXButton layoutX="185.0" layoutY="343.0" style="-fx-background-color: White;" text="Cancelar Bolsillo" AnchorPane.rightAnchor="15.0" />
-            <JFXTextField focusColor="#fa2c56" layoutX="22.0" layoutY="304.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite el numero del bolsillo" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <JFXTextField fx:id="numeroCancelarBB" focusColor="#fa2c56" layoutX="22.0" layoutY="304.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite el numero del bolsillo" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="AnchorTransaction" layoutX="190.0" prefHeight="500.0" prefWidth="315.0" style="-fx-background-color: #140b21;" visible="false" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
@@ -111,7 +111,7 @@
                   <Font name="Monospaced Italic" size="15.0" />
                </font>
             </Label>
-            <JFXTextField focusColor="#fa2c56" layoutX="15.0" layoutY="118.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite el numero de la cuenta" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <JFXTextField fx:id="numeroCT" focusColor="#fa2c56" layoutX="15.0" layoutY="118.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite el numero de la cuenta" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
             <Label layoutX="15.0" layoutY="266.0" text="Consultar Saldo" textFill="#fa2c56" AnchorPane.leftAnchor="15.0">
                <font>
                   <Font name="Monospaced Bold Italic" size="15.0" />
@@ -123,13 +123,13 @@
                </font>
             </Label>
             <Separator layoutX="15.0" layoutY="285.0" prefHeight="1.0" prefWidth="283.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
-            <JFXTextField focusColor="#fa2c56" layoutX="15.0" layoutY="329.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite el numero de la cuenta" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <JFXTextField fx:id="numeroCT2" focusColor="#fa2c56" layoutX="15.0" layoutY="329.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite el numero de la cuenta" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
             <Label layoutX="15.0" layoutY="161.0" text="Ingresar valor:" textFill="WHITE" AnchorPane.leftAnchor="15.0">
                <font>
                   <Font name="Monospaced Italic" size="15.0" />
                </font>
             </Label>
-            <JFXTextField focusColor="#fa2c56" layoutX="158.0" layoutY="158.0" prefHeight="25.0" prefWidth="145.0" promptText="\$" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.rightAnchor="15.0" />
+            <JFXTextField fx:id="valorT" focusColor="#fa2c56" layoutX="158.0" layoutY="158.0" prefHeight="25.0" prefWidth="145.0" promptText="\$" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.rightAnchor="15.0" />
             <JFXButton layoutX="229.0" layoutY="211.0" style="-fx-background-color: white;" text="Depositar" AnchorPane.rightAnchor="15.0" />
             <JFXButton layoutX="176.0" layoutY="211.0" style="-fx-background-color: white;" text="Retirar" AnchorPane.rightAnchor="95.0" />
             <JFXButton layoutX="83.0" layoutY="211.0" style="-fx-background-color: white;" text="Trasladar" AnchorPane.rightAnchor="160.0" />
@@ -140,7 +140,7 @@
             <DropShadow />
          </effect>
       </AnchorPane>
-      <AnchorPane fx:id="AnchorCharge" layoutX="190.0" prefHeight="500.0" prefWidth="315.0" style="-fx-background-color: #140b21;" visible="false" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+      <AnchorPane fx:id="AnchorCharge" layoutX="190.0" prefHeight="500.0" prefWidth="315.0" style="-fx-background-color: #140b21;" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
          <children>
             <Pane layoutX="35.0" layoutY="170.0" opacity="0.5" prefHeight="161.0" prefWidth="245.0" rotate="29.5" style="-fx-background-color: #FA2C56; -fx-background-radius: 20;" AnchorPane.bottomAnchor="169.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="170.0">
                <effect>
@@ -158,7 +158,7 @@
                   <Font name="Monospaced Bold Italic" size="15.0" />
                </font>
             </Label>
-            <JFXTextField focusColor="#fa2c56" layoutX="15.0" layoutY="107.0" prefHeight="25.0" prefWidth="285.0" promptText="Ingrese el nombre o ruta del archivo" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.rightAnchor="15.0" />
+            <JFXTextField fx:id="rutaCargar" focusColor="#fa2c56" layoutX="15.0" layoutY="107.0" prefHeight="25.0" prefWidth="285.0" promptText="Ingrese el nombre o ruta del archivo" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.rightAnchor="15.0" />
             <JFXButton layoutX="205.0" layoutY="152.0" style="-fx-background-color: White;" text="Cargar Archivo" AnchorPane.rightAnchor="15.0" />
             <TableView layoutX="11.0" layoutY="234.0" prefHeight="215.0" prefWidth="293.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0">
               <columns>
@@ -274,17 +274,17 @@
             <DropShadow />
          </effect>
       </AnchorPane>
-      <Pane fx:id="logo1" layoutX="225.0" layoutY="146.0" opacity="0.5" prefHeight="161.0" prefWidth="245.0" rotate="29.5" style="-fx-background-color: #FA2C56; -fx-background-radius: 20;" AnchorPane.bottomAnchor="169.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="170.0">
+      <Pane fx:id="logo1" layoutX="225.0" layoutY="146.0" opacity="0.5" prefHeight="161.0" prefWidth="245.0" rotate="29.5" style="-fx-background-color: #FA2C56; -fx-background-radius: 20;" visible="false" AnchorPane.bottomAnchor="169.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="170.0">
          <effect>
             <DropShadow />
          </effect>
       </Pane>
-      <ImageView fx:id="logo2" fitHeight="150.0" fitWidth="200.0" layoutX="273.0" layoutY="175.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="175.0" AnchorPane.topAnchor="175.0">
+      <ImageView fx:id="logo2" fitHeight="150.0" fitWidth="200.0" layoutX="273.0" layoutY="175.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="175.0" AnchorPane.topAnchor="175.0">
          <image>
             <Image url="@../icons/us_dollar_64px.png" />
          </image>
       </ImageView>
-      <Label fx:id="logo3" layoutX="217.0" layoutY="197.0" text="Bank" textFill="#140b21">
+      <Label fx:id="logo3" layoutX="217.0" layoutY="197.0" text="Bank" textFill="#140b21" visible="false">
          <font>
             <Font name="Algerian" size="96.0" />
          </font>
