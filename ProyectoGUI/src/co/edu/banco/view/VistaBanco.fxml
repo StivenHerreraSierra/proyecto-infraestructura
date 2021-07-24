@@ -140,7 +140,7 @@
             <DropShadow />
          </effect>
       </AnchorPane>
-      <AnchorPane fx:id="AnchorCharge" layoutX="190.0" prefHeight="500.0" prefWidth="315.0" style="-fx-background-color: #140b21;" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+      <AnchorPane fx:id="AnchorCharge" layoutX="190.0" prefHeight="500.0" prefWidth="315.0" style="-fx-background-color: #140b21;" visible="false" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
          <children>
             <Pane layoutX="35.0" layoutY="170.0" opacity="0.5" prefHeight="161.0" prefWidth="245.0" rotate="29.5" style="-fx-background-color: #FA2C56; -fx-background-radius: 20;" AnchorPane.bottomAnchor="169.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="170.0">
                <effect>
@@ -274,17 +274,17 @@
             <DropShadow />
          </effect>
       </AnchorPane>
-      <Pane fx:id="logo1" layoutX="225.0" layoutY="146.0" opacity="0.5" prefHeight="161.0" prefWidth="245.0" rotate="29.5" style="-fx-background-color: #FA2C56; -fx-background-radius: 20;" visible="false" AnchorPane.bottomAnchor="169.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="170.0">
+      <Pane fx:id="logo1" layoutX="225.0" layoutY="146.0" opacity="0.5" prefHeight="161.0" prefWidth="245.0" rotate="29.5" style="-fx-background-color: #FA2C56; -fx-background-radius: 20;" AnchorPane.bottomAnchor="169.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="170.0">
          <effect>
             <DropShadow />
          </effect>
       </Pane>
-      <ImageView fx:id="logo2" fitHeight="150.0" fitWidth="200.0" layoutX="273.0" layoutY="175.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="175.0" AnchorPane.topAnchor="175.0">
+      <ImageView fx:id="logo2" fitHeight="150.0" fitWidth="200.0" layoutX="273.0" layoutY="175.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="175.0" AnchorPane.topAnchor="175.0">
          <image>
             <Image url="@../icons/us_dollar_64px.png" />
          </image>
       </ImageView>
-      <Label fx:id="logo3" layoutX="217.0" layoutY="197.0" text="Bank" textFill="#140b21" visible="false">
+      <Label fx:id="logo3" layoutX="217.0" layoutY="197.0" text="Bank" textFill="#140b21">
          <font>
             <Font name="Algerian" size="96.0" />
          </font>
