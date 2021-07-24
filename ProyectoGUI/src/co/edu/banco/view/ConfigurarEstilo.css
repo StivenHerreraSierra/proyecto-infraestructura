@@ -1,0 +1,28 @@
+.separator .line {
+    -fx-background-color:   #1a1630;
+    -fx-pref-height: 2;
+    -fx-border-color: null ;
+}
+.text-field {
+    -fx-prompt-text-fill: gray;
+}
+.table-view .column-header:hover {
+    -fx-background-color: #36474F;
+}
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: white;
+    -fx-size: 45;
+    -fx-border-color: -fx-box-border;
+    -fx-border-width: 0 1 3 0;
+    -fx-border-insets: 0;
+}
+.table-view .column-header .label{
+    
+    -fx-alignment: CENTER;
+}
+.table-view:row-selection .table-row-cell:filled:selected:hover {
+    -fx-background-color:  #FA2C56;
+}
+.table-view:row-selection .table-row-cell:filled:selected {
+    -fx-background-color: #e46d87;
+}

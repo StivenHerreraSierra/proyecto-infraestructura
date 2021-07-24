@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="505.0" style="-fx-background-color: #140b21;" stylesheets="@ConfigurarEstilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.banco.view.ViewController">
+   <children>
+      <AnchorPane fx:id="AnchorAccount" layoutX="190.0" prefHeight="500.0" prefWidth="315.0" style="-fx-background-color: #140b21;" visible="false" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Pane layoutX="35.0" layoutY="170.0" opacity="0.5" prefHeight="161.0" prefWidth="245.0" rotate="29.5" style="-fx-background-color: #FA2C56; -fx-background-radius: 20;" AnchorPane.bottomAnchor="169.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="170.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <Label layoutX="15.0" layoutY="76.0" text="Crear Cuenta" textFill="#fa2c56" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="76.0">
+               <font>
+                  <Font name="Monospaced Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="15.0" layoutY="94.0" prefHeight="1.0" prefWidth="283.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <Label layoutX="15.0" layoutY="116.0" text="Informacion de cuenta" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="Monospaced Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="152.0" text="Ingresar nombre:" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="Monospaced Italic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField focusColor="#fa2c56" layoutX="160.0" layoutY="149.0" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.rightAnchor="15.0" />
+            <JFXButton layoutX="210.0" layoutY="194.0" style="-fx-background-color: White;" text="Crear Cuenta" AnchorPane.rightAnchor="15.0" />
+            <Separator layoutX="15.0" layoutY="257.0" prefHeight="1.0" prefWidth="283.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <Label layoutX="15.0" layoutY="239.0" text="Cancelar Cuenta" textFill="#fa2c56" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="Monospaced Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="282.0" text="Ingresar numero de cuenta:" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+               <font>
+                  <Font name="Monospaced Italic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField focusColor="#fa2c56" layoutX="22.0" layoutY="313.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite el numero de la cuenta" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <JFXButton layoutX="192.0" layoutY="356.0" style="-fx-background-color: White;" text="Cancelar Cuenta" AnchorPane.rightAnchor="15.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AnchorPocket" layoutX="190.0" prefHeight="500.0" prefWidth="315.0" style="-fx-background-color: #140b21;" visible="false" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Pane layoutX="14.0" layoutY="147.0" opacity="0.5" prefHeight="161.0" prefWidth="245.0" rotate="29.5" style="-fx-background-color: #FA2C56; -fx-background-radius: 20;" AnchorPane.bottomAnchor="169.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="170.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <Label layoutX="24.0" layoutY="40.0" text="Crear Bolsillo" textFill="#fa2c56" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="76.0">
+               <font>
+                  <Font name="Monospaced Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="16.0" layoutY="94.0" prefHeight="1.0" prefWidth="283.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <Label layoutX="16.0" layoutY="111.0" text="Ingresar numero de cuenta:" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="Monospaced Italic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField focusColor="#fa2c56" layoutX="15.0" layoutY="138.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite el numero de la cuenta" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <JFXButton layoutX="209.0" layoutY="177.0" style="-fx-background-color: White;" text="Crear Bolsillo" AnchorPane.rightAnchor="15.0" />
+            <Label layoutX="22.0" layoutY="241.0" text="Cancelar Bolsillo" textFill="#fa2c56" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="Monospaced Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="276.0" text="Ingresar numero de bolsillo:" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="Monospaced Italic" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="16.0" layoutY="260.0" prefHeight="1.0" prefWidth="283.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <JFXButton layoutX="185.0" layoutY="343.0" style="-fx-background-color: White;" text="Cancelar Bolsillo" AnchorPane.rightAnchor="15.0" />
+            <JFXTextField focusColor="#fa2c56" layoutX="22.0" layoutY="304.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite el numero del bolsillo" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AnchorTransaction" layoutX="190.0" prefHeight="500.0" prefWidth="315.0" style="-fx-background-color: #140b21;" visible="false" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+         <children>
+            <Pane layoutX="14.0" layoutY="147.0" opacity="0.5" prefHeight="161.0" prefWidth="245.0" rotate="29.5" style="-fx-background-color: #FA2C56; -fx-background-radius: 20;" AnchorPane.bottomAnchor="169.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="170.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <Label layoutX="15.0" layoutY="56.0" text="Generar transaccion" textFill="#fa2c56" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="56.0">
+               <font>
+                  <Font name="Monospaced Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="15.0" layoutY="74.0" prefHeight="1.0" prefWidth="283.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <Label layoutX="15.0" layoutY="91.0" text="Ingresar numero de cuenta:" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="Monospaced Italic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField focusColor="#fa2c56" layoutX="15.0" layoutY="118.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite el numero de la cuenta" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <Label layoutX="15.0" layoutY="266.0" text="Consultar Saldo" textFill="#fa2c56" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="Monospaced Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="301.0" text="Ingresar numero de cuenta:" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="Monospaced Italic" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="15.0" layoutY="285.0" prefHeight="1.0" prefWidth="283.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <JFXTextField focusColor="#fa2c56" layoutX="15.0" layoutY="329.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite el numero de la cuenta" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <Label layoutX="15.0" layoutY="161.0" text="Ingresar valor:" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="Monospaced Italic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField focusColor="#fa2c56" layoutX="158.0" layoutY="158.0" prefHeight="25.0" prefWidth="145.0" promptText="\$" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.rightAnchor="15.0" />
+            <JFXButton layoutX="229.0" layoutY="211.0" style="-fx-background-color: white;" text="Depositar" AnchorPane.rightAnchor="15.0" />
+            <JFXButton layoutX="176.0" layoutY="211.0" style="-fx-background-color: white;" text="Retirar" AnchorPane.rightAnchor="95.0" />
+            <JFXButton layoutX="83.0" layoutY="211.0" style="-fx-background-color: white;" text="Trasladar" AnchorPane.rightAnchor="160.0" />
+            <JFXButton layoutX="70.0" layoutY="371.0" style="-fx-background-color: white;" text="Consultar saldo del bolsillo de la cuenta" AnchorPane.rightAnchor="15.0" />
+            <JFXButton layoutX="133.0" layoutY="409.0" style="-fx-background-color: white;" text="Consultar saldo de la cuenta" AnchorPane.rightAnchor="15.0" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="AnchorCharge" layoutX="190.0" prefHeight="500.0" prefWidth="315.0" style="-fx-background-color: #140b21;" visible="false" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+         <children>
+            <Pane layoutX="35.0" layoutY="170.0" opacity="0.5" prefHeight="161.0" prefWidth="245.0" rotate="29.5" style="-fx-background-color: #FA2C56; -fx-background-radius: 20;" AnchorPane.bottomAnchor="169.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="170.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <Label layoutX="15.0" layoutY="34.0" text="Cargar Datos" textFill="#fa2c56" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="34.0">
+               <font>
+                  <Font name="Monospaced Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="15.0" layoutY="52.0" prefHeight="1.0" prefWidth="283.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <Label layoutX="15.0" layoutY="74.0" text="Ingrese el nombre o ruta:" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+               <font>
+                  <Font name="Monospaced Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField focusColor="#fa2c56" layoutX="15.0" layoutY="107.0" prefHeight="25.0" prefWidth="285.0" promptText="Ingrese el nombre o ruta del archivo" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.rightAnchor="15.0" />
+            <JFXButton layoutX="205.0" layoutY="152.0" style="-fx-background-color: White;" text="Cargar Archivo" AnchorPane.rightAnchor="15.0" />
+            <TableView layoutX="11.0" layoutY="234.0" prefHeight="215.0" prefWidth="293.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0">
+              <columns>
+                <TableColumn prefWidth="113.0" text="Numero de cuenta" />
+                <TableColumn prefWidth="179.0" text="Nombre del usuario" />
+              </columns>
+            </TableView>
+            <Separator layoutX="16.0" layoutY="224.0" prefHeight="1.0" prefWidth="283.0" />
+            <Label layoutX="16.0" layoutY="206.0" text="Cuentas Del Banco" textFill="#fa2c56">
+               <font>
+                  <Font name="Monospaced Bold Italic" size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="2.0" prefHeight="500.0" prefWidth="188.0" style="-fx-background-color: #130f29;" AnchorPane.leftAnchor="2.0">
+         <children>
+            <Pane layoutY="49.0" prefHeight="89.0" prefWidth="186.0" style="-fx-background-color: #FA2C56; -fx-background-radius: 10;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+               <children>
+                  <Label layoutX="35.0" layoutY="31.0" text="Menu" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Bold Italic" size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <ImageView fitHeight="45.0" fitWidth="46.0" layoutX="106.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/bank_building_50px.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <VBox layoutY="168.0" prefHeight="205.0" prefWidth="188.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <JFXButton onAction="#crudCuenta" prefWidth="188.0" style="-fx-background-color: #1a1630;" text="Cuenta" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/add_user_male_50px.png" />
+                           </image>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Monospaced Italic" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton onAction="#crudBolsillo" prefWidth="188.0" text="Bolsillo" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Italic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/money_box_50px.png" />
+                           </image>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton onAction="#crudTransaccion" prefWidth="188.0" style="-fx-background-color: #1a1630;" text="Transaccion" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Italic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/dollar_euro_exchange_50px.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton onAction="#crudCargar" prefWidth="188.0" text="Cargar" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Italic" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/cashbook_50px.png" />
+                           </image>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </VBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <Pane fx:id="logo1" layoutX="225.0" layoutY="146.0" opacity="0.5" prefHeight="161.0" prefWidth="245.0" rotate="29.5" style="-fx-background-color: #FA2C56; -fx-background-radius: 20;" AnchorPane.bottomAnchor="169.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="170.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <ImageView fx:id="logo2" fitHeight="150.0" fitWidth="200.0" layoutX="273.0" layoutY="175.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="175.0" AnchorPane.topAnchor="175.0">
+         <image>
+            <Image url="@../icons/us_dollar_64px.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="logo3" layoutX="217.0" layoutY="197.0" text="Bank" textFill="#140b21">
+         <font>
+            <Font name="Algerian" size="96.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>
