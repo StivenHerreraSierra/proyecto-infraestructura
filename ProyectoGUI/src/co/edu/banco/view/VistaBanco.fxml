@@ -38,7 +38,7 @@
                   <Font name="Monospaced Italic" size="15.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="nombreCrearC" focusColor="#fa2c56" layoutX="160.0" layoutY="149.0" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.rightAnchor="15.0" />
+            <JFXTextField fx:id="nombreCrearC" focusColor="#fa2c56" layoutX="160.0" layoutY="149.0" prefHeight="25.0" prefWidth="135.0" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="15.0" />
             <JFXButton layoutX="210.0" layoutY="194.0" onAction="#abrirCuenta" style="-fx-background-color: White;" text="Crear Cuenta" AnchorPane.rightAnchor="15.0" />
             <Separator layoutX="15.0" layoutY="257.0" prefHeight="1.0" prefWidth="283.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
             <Label layoutX="15.0" layoutY="239.0" text="Cancelar Cuenta" textFill="#fa2c56" AnchorPane.leftAnchor="15.0">
@@ -158,19 +158,20 @@
                   <Font name="Monospaced Bold Italic" size="15.0" />
                </font>
             </Label>
-            <JFXButton layoutX="112.0" layoutY="155.0" onAction="#cargarArchivo" prefHeight="82.0" prefWidth="95.0" style="-fx-background-color: transparent;" text=" " AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="94.0">
-               <graphic>
-                  <ImageView fitHeight="55.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../icons/downloads_folder_50px.png" />
-                     </image>
-                  </ImageView>
-               </graphic></JFXButton>
             <Label layoutX="45.0" layoutY="110.0" text="para &quot;Cargar el archivo&quot;." textFill="WHITE">
                <font>
                   <Font name="Monospaced Bold Italic" size="15.0" />
                </font>
             </Label>
+            <Button layoutX="107.0" layoutY="138.0" mnemonicParsing="false" onAction="#cargarArchivo" prefHeight="89.0" prefWidth="103.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="67.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/icons8_downloads_folder_64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
          <effect>
             <DropShadow />
