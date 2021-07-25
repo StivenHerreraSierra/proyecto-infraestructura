@@ -31,9 +31,10 @@ public class EchoTCPClientProtocol {
 		return fromServer;
 	}
 	
-	public String cargaAutomatica(String rutaArchivo) throws IOException {
+	public String cargaAutomatica(String comandoUser) throws IOException {
 		String linea;
-		File archivo = new File(rutaArchivo);
+		String ruta = (comandoUser.startsWith("CARGA")) ? comandoUser.replace("CARGA,", "") : comandoUser;
+		File archivo = new File(ruta);
 		String respuesta = "";
 		
 		if(!archivo.exists())

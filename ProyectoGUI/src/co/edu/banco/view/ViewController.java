@@ -1,5 +1,7 @@
 package co.edu.banco.view;
 
+import java.io.File;
+
 import com.jfoenix.controls.JFXTextField;
 import co.edu.banco.aplication.Aplication;
 import co.edu.banco.model.exception.CampoVacioException;
@@ -10,6 +12,8 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
 
 public class ViewController {
 
@@ -364,21 +368,24 @@ public class ViewController {
 	
 	@FXML
 	public void cargarArchivo() {
-		
+		FileChooser chooser = new FileChooser();
+		chooser.setTitle("Selecciona el archivo a cargar");
+		chooser.getExtensionFilters().addAll(new ExtensionFilter("Text Files", "*.txt"));
+		File selectedFile = chooser.showOpenDialog(null);
 		
 		try {
-			String ruta= rutaCargar.getText();
+			String ruta= selectedFile.getAbsolutePath();
 			if(ruta.equals("")) {
-				throw new CampoVacioException("No ingreso la ruta del archivo a cargar");
+				throw new CampoVacioException("No selecciono el archivo a cargar");
 			}
 			else {
 				
-//				aplicacion.realizarTransaccion(ruta);
+				aplicacion.realizarTransaccion("CARGA," + ruta);
 				
 			}
 			
 		}catch(CampoVacioException e){
-			Aplication.mostrarMensaje("", AlertType.ERROR, "Campo vacio", "Error durante la transaccion",  "No ingreso el numero del bolsillo a cancelar", null);
+			Aplication.mostrarMensaje("", AlertType.ERROR, "Campo vacio", "Error durante la transaccion",  "No selecciono el archivo a cargar.", null);
 		}
 		limpiarCamposText();
 	}
