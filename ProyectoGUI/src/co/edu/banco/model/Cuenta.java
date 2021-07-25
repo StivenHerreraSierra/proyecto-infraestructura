@@ -168,7 +168,7 @@ public class Cuenta {
 	}
 	
 	public String toString() {
-		return "Numero de cuenta: " + numeroCuenta + ", Usuario: "+ nombreCuenta+", Saldo: " + saldo;
+		return "Numero de cuenta: " + numeroCuenta + " - Usuario: "+ nombreCuenta+" - Saldo: " + saldo;
 	}	
 	
 	//================Transacción================

@@ -87,7 +87,7 @@ public class Bolsillo {
 	
 	@Override
 	public String toString() {
-		return "Numero de bolsillo: " + numeroCuenta + ", Saldo: " + saldo;
+		return "Numero de bolsillo: " + numeroCuenta + " - Saldo: " + saldo;
 	}
 
 	public ArrayList<Transaccion> getListaTransacciones() {
