@@ -374,15 +374,11 @@ public class ViewController {
 		File selectedFile = chooser.showOpenDialog(null);
 		
 		try {
-			String ruta= selectedFile.getAbsolutePath();
-			if(ruta.equals("")) {
+			if(selectedFile == null)
 				throw new CampoVacioException("No selecciono el archivo a cargar");
-			}
-			else {
-				
-				aplicacion.realizarTransaccion("CARGA," + ruta);
-				
-			}
+
+			String ruta= selectedFile.getAbsolutePath();
+			aplicacion.realizarTransaccion("CARGA," + ruta);
 			
 		}catch(CampoVacioException e){
 			Aplication.mostrarMensaje("", AlertType.ERROR, "Campo vacio", "Error durante la transaccion",  "No selecciono el archivo a cargar.", null);
@@ -392,7 +388,6 @@ public class ViewController {
 	
 	@FXML
 	public void limpiarCamposText() {
-		rutaCargar.setText("");
 		numeroCT.setText("");
 		valorT.setText("");
 		numeroCT2.setText("");
