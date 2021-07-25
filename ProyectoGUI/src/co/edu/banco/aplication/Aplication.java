@@ -2,6 +2,7 @@ package co.edu.banco.aplication;
 
 import java.io.IOException;
 
+import co.edu.banco.echo.EchoTCPClient;
 import co.edu.banco.view.ViewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -16,6 +17,7 @@ public class Aplication extends Application{
 
 	private Stage primaryStage;
 	private BorderPane rootLayout;
+	private EchoTCPClient cliente;
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -26,11 +28,22 @@ public class Aplication extends Application{
 	}
 
 	@Override
-	public void start(Stage primaryStage) throws IOException {
+	public void start(Stage primaryStage) throws Exception {
+		cliente = new EchoTCPClient();
+		
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("Banco");
 		initRootLayout();
 		showPersonOverview();
+		
+		primaryStage.setOnCloseRequest(event -> {if(cliente != null)
+			try {
+				cliente.realizarTransaccion("SALIR");
+				cliente.cerrarConexion();
+			} catch (IOException e) {
+				mostrarMensaje("", AlertType.ERROR, "Error conexion", "", "Error cerrando la conexión con el servidor: " + e.getMessage(), null);
+			}}
+		);
 	}
 
 	public void initRootLayout() {
@@ -63,15 +76,37 @@ public class Aplication extends Application{
 	public Stage getPrimaryStage() {
 		return primaryStage;
 	}
+	
+	public void realizarTransaccion(String comando) {
+		String respuesta;
+		boolean terminadaExito = true;
+		try {
+			respuesta = cliente.realizarTransaccion(comando);
+			
+			terminadaExito = !respuesta.toLowerCase().contains("error");
+		} catch (IOException e) {
+			respuesta = e.getMessage();
+			terminadaExito = false;
+		}
+		
+		mostrarResultado(respuesta, terminadaExito);
+	}
+	
+	public void mostrarResultado(String mensaje, boolean terminadaExito) {
+		if(terminadaExito)
+			mostrarMensaje("", AlertType.INFORMATION, "Resultado de transaccion", "", "Informe de la solicitud de la transaccion: " + mensaje, null);
+		else
+			mostrarMensaje("", AlertType.ERROR, "Error de transaccion", "", "Error durante la solicitud de la transaccion: " + mensaje, null);
+	}
 
 	public static void mostrarMensaje(String mensaje, AlertType miA, String titulo, String cabecera, String contenido, Stage escenarioPrincipal )
 	{
-	Alert alert = new Alert(miA);
-	alert.initOwner(escenarioPrincipal);
-	alert.setTitle(titulo);
-	alert.setHeaderText(cabecera);
-	alert.setContentText(contenido);
-	alert.showAndWait();
+		Alert alert = new Alert(miA);
+		alert.initOwner(escenarioPrincipal);
+		alert.setTitle(titulo);
+		alert.setHeaderText(cabecera);
+		alert.setContentText(contenido);
+		alert.showAndWait();
 	}
 	
 }
