@@ -114,7 +114,7 @@ public class EchoTCPServerProtocol implements Runnable{
 			Cuenta cuenta = miBanco.crearCuenta(nombreUsuario);
 			res = "Cuenta creada con exito -> " + cuenta;
 		} catch (CuentaException e) {
-			res = e.getMessage();
+			res = "Error, " + e.getMessage();
 		}
 		
 		return res;
@@ -127,9 +127,9 @@ public class EchoTCPServerProtocol implements Runnable{
 			Bolsillo bolsillo = miBanco.crearBolsillo(Integer.parseInt(numeroCuenta));
 			res = "Bolsillo creado con exito -> " + bolsillo;
 		} catch (NumberFormatException e) {
-			res = "El número de cuenta contiene caracteres invalidos.";
+			res = "Error, el número de cuenta contiene caracteres invalidos.";
 		} catch (BolsilloException | CuentaException e) {
-			res = e.getMessage();
+			res = "Error, " +  e.getMessage();
 		}
 		
 		return res;
@@ -142,7 +142,7 @@ public class EchoTCPServerProtocol implements Runnable{
 			miBanco.cancelarBolsillo(numeroBolsillo);
 			res = "Bolsillo cancelado correctamente";
 		} catch (BolsilloException | CuentaException e) {
-			res = e.getMessage();
+			res = "Error, " + e.getMessage();
 		}
 		
 		return res;
@@ -155,9 +155,9 @@ public class EchoTCPServerProtocol implements Runnable{
 			miBanco.cancelarCuenta(Integer.parseInt(numeroCuenta));
 			res = "Cuenta cancelada correctamente";
 		} catch (NumberFormatException e) { 
-			res = "El número de cuenta contiene caracteres invalidos.";
+			res = "Error, el número de cuenta contiene caracteres invalidos.";
 		} catch (CuentaException e) {
-			res = e.getMessage();
+			res = "Error, " + e.getMessage();
 		}
 		
 		return res;
@@ -171,9 +171,9 @@ public class EchoTCPServerProtocol implements Runnable{
 					Double.parseDouble(valor));
 			res = "Deposito realizado correctamente";
 		} catch (NumberFormatException e) {
-			res = "El número de cuenta o valor contiene caracteres invalidos.";
+			res = "Error, el número de cuenta o valor contiene caracteres invalidos.";
 		} catch (CuentaException e) {
-			res = e.getMessage();
+			res = "Error, " + e.getMessage();
 		}
 		
 		return res;
@@ -187,9 +187,9 @@ public class EchoTCPServerProtocol implements Runnable{
 					Double.parseDouble(valor));
 			res = "Retiro realizado satisfactoriamente";
 		} catch (NumberFormatException e) {
-			res = "El número de cuenta o valor contiene caracteres invalidos.";
+			res = "Error, l número de cuenta o valor contiene caracteres invalidos.";
 		} catch(CuentaException e) {
-			res = e.getMessage();
+			res = "Error, " + e.getMessage();
 		}
 		
 		return res;
@@ -203,9 +203,9 @@ public class EchoTCPServerProtocol implements Runnable{
 					Double.parseDouble(valor));
 			res = "Traslado exitoso";
 		} catch (NumberFormatException e) {
-			res = "El número de cuenta o valor contiene caracteres invalidos.";
+			res = "Error, el número de cuenta o valor contiene caracteres invalidos.";
 		} catch (CuentaException | BolsilloException e) {
-			res = e.getMessage();
+			res = "Error, " + e.getMessage();
 		}
 		
 		return res;
@@ -217,9 +217,9 @@ public class EchoTCPServerProtocol implements Runnable{
 		try {
 			res = "Saldo disponible en la cuenta " + numero + ": " + miBanco.consultarSaldo(numero);
 		} catch (NumberFormatException e) {
-			res = "El número de cuenta contiene caracteres invalidos.";
+			res = "Error, el número de cuenta contiene caracteres invalidos.";
 		} catch (CuentaException | BolsilloException e) {
-			res = e.getMessage();
+			res = "Error, " + e.getMessage();
 		}
 
 		return res;
