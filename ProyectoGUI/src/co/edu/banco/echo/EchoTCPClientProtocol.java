@@ -37,7 +37,7 @@ public class EchoTCPClientProtocol {
 		String respuesta = "";
 		
 		if(!archivo.exists())
-			throw new FileNotFoundException("El archivo no fue encontrado.");
+			throw new FileNotFoundException("Error, el archivo no fue encontrado.");
 		
 		BufferedReader reader = new BufferedReader(new FileReader(archivo));
 		while((linea = reader.readLine()) != null) {
