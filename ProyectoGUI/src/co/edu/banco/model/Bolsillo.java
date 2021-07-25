@@ -37,7 +37,7 @@ public class Bolsillo {
 		Transaccion transaccion = new Transaccion(tipo, Transaccion.DATE_FORMAT.format(date));
 		
 		if(existeTransaccion(transaccion))
-			throw new BolsilloException("Error, la transacción ya está registrada.");
+			throw new BolsilloException("Error, la transacción ya esta registrada.");
 		
 		this.listaTransacciones.add(transaccion);
 	}

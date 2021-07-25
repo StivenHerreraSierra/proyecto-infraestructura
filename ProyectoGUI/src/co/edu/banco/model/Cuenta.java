@@ -182,7 +182,7 @@ public class Cuenta {
 		Transaccion transaccion = new Transaccion(tipo, Transaccion.DATE_FORMAT.format(date));
 		
 		if(existeTransaccion(transaccion))
-			throw new CuentaException("Error, la transacción ya está registrada.");
+			throw new CuentaException("Error, la transacción ya esta registrada.");
 		
 		this.listaTransacciones.add(transaccion);
 	}
