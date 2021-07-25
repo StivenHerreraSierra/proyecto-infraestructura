@@ -164,7 +164,7 @@
                </font>
             </Label>
             <JFXTextField fx:id="rutaCargar" focusColor="#fa2c56" layoutX="15.0" layoutY="107.0" prefHeight="25.0" prefWidth="285.0" promptText="Ingrese el nombre o ruta del archivo" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.rightAnchor="15.0" />
-            <JFXButton layoutX="205.0" layoutY="152.0" style="-fx-background-color: White;" text="Cargar Archivo" AnchorPane.rightAnchor="15.0" />
+            <JFXButton layoutX="205.0" layoutY="152.0" style="-fx-background-color: White;" text="Cargar Archivo" AnchorPane.rightAnchor="15.0" onAction="#cargarArchivo" />
             <TableView layoutX="11.0" layoutY="234.0" prefHeight="215.0" prefWidth="293.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0">
               <columns>
                 <TableColumn prefWidth="113.0" text="Numero de cuenta" />
