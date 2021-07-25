@@ -132,9 +132,9 @@ public class ClientView {
 					+ "**********************************************************\n"
 					+ "*                   Carga automatica                     *\n"
 					+ "**********************************************************");
-			
+			comando = "CARGA,";
 			System.out.print("Escriba el nombre/ruta del archivo: ");
-			comando = SCANNER.nextLine();
+			comando += SCANNER.nextLine();
 			
 		} else if(opcion.equals("0")) {
 			

@@ -44,7 +44,7 @@ public class EchoTCPClientProtocol {
 			
 			comando = ClientView.crearComando(fromUser);
 			
-			if(!fromUser.equals("9"))
+			if(!comando.startsWith("CARGA"))
 				procesarTransaccion(comando);
 			else
 				cargaAutomatica(comando);
@@ -77,9 +77,10 @@ public class EchoTCPClientProtocol {
 		SCANNER.nextLine();
 	}
 	
-	private static void cargaAutomatica(String rutaArchivo) throws IOException {
+	private static void cargaAutomatica(String comandoUser) throws IOException {
 		String linea;
-		File archivo = new File(rutaArchivo);
+		String ruta = (comandoUser.startsWith("CARGA")) ? comandoUser.replace("CARGA,", "") : comandoUser;
+		File archivo = new File(ruta);
 		
 		if(!archivo.exists())
 			throw new FileNotFoundException("El archivo no fue encontrado.");
