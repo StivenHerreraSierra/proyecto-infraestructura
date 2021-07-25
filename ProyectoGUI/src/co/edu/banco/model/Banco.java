@@ -36,7 +36,7 @@ public class Banco {
 		Cuenta cuenta = obtenerCuenta(numeroCuenta);
 		
 		if(cuenta == null)
-			throw new BolsilloException("Error creando el bolsillo: el usuario no está registrado.");
+			throw new BolsilloException("Error creando el bolsillo: el usuario no esta registrado.");
 		
 		cuenta.crearBolsillo();
 		return cuenta.getBolsilloCuenta();
@@ -79,7 +79,7 @@ public class Banco {
 		Cuenta cuenta= obtenerCuenta(numeroCuenta);
 		
 		if(cuenta == null) {
-			throw new CuentaException("Error, el número de cuenta no está registrado.");
+			throw new CuentaException("Error, el numero de cuenta no esta registrado.");
 		}
 		else {
 			double saldo=cuenta.getSaldo();
@@ -117,7 +117,7 @@ public class Banco {
 			cuenta.agregarTransaccion(TipoTransaccion.ABRIR_CUENTA);
 			return cuenta;
 		} else {
-			throw new CuentaException("Error creando la cuenta: el usuario " + nombre + " ya está registrado.");
+			throw new CuentaException("Error creando la cuenta: el usuario " + nombre + " ya esta registrado.");
 		}
 	}
 	
@@ -133,7 +133,7 @@ public class Banco {
 		Cuenta cuenta = obtenerCuenta(numeroCuenta);
 		
 		if(cuenta == null)
-			throw new CuentaException("Error, el número de cuenta no está registrado.");
+			throw new CuentaException("Error, el numero de cuenta no esta registrado.");
 		
 		cuenta.depositarDinero(valorDepositar);
 		
@@ -145,7 +145,7 @@ public class Banco {
 		Cuenta cuenta = obtenerCuenta(numeroCuenta);
 		
 		if(cuenta == null)
-			throw new CuentaException("Error, el número de cuenta no está registrado.");
+			throw new CuentaException("Error, el numero de cuenta no esta registrado.");
 		
 		cuenta.retirarDinero(valorRetirar);
 		
@@ -158,7 +158,7 @@ public class Banco {
 		Cuenta cuenta = obtenerCuenta(numeroCuenta);
 		
 		if(cuenta == null)
-			throw new CuentaException("Error, el número de cuenta no está registrado.");
+			throw new CuentaException("Error, el numero de cuenta no esta registrado.");
 		
 		cuenta.trasladarDinero(valorTrasladar);
 		
@@ -172,7 +172,7 @@ public class Banco {
 		Cuenta cuenta = obtenerCuenta(numeroCuentaAhorro);
 		
 		if(cuenta == null)
-			throw new CuentaException("Error, el número de cuenta "+ numeroCuenta + " no está registrado.");
+			throw new CuentaException("Error, el numero de cuenta "+ numeroCuenta + " no esta registrado.");
 		
 		if(numeroCuenta.endsWith("b"))
 			saldo = cuenta.consultarSaldoBolsillo();
