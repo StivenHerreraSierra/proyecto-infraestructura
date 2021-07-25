@@ -1,14 +1,12 @@
 package co.edu.banco.view;
 
-import javax.swing.JOptionPane;
-
 import com.jfoenix.controls.JFXTextField;
-
 import co.edu.banco.aplication.Aplication;
 import co.edu.banco.model.exception.CampoVacioException;
 import co.edu.banco.model.exception.NumeroCuentaBolsilloException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -116,12 +114,12 @@ public class ViewController {
 			}
 			else {
 				comando+=nombre;
-//				aplicacion.realizarTransaccion(comando);
+				aplicacion.realizarTransaccion(comando);
 				
 			}
 			
 		}catch(CampoVacioException e){
-			JOptionPane.showMessageDialog(null, "No ingreso el nombre para crear la cuenta", "Campo vacio", JOptionPane.WARNING_MESSAGE);
+			Aplication.mostrarMensaje("", AlertType.ERROR, "Campo vacío", "Error durante la transaccion",  "No ingreso el nombre para crear la cuenta", null);
 		}
 		limpiarCamposText();
 	}
@@ -137,12 +135,12 @@ public class ViewController {
 			}
 			else {
 				comando+=numeroCuenta;
-//				aplicacion.realizarTransaccion(comando);
+				aplicacion.realizarTransaccion(comando);
 				
 			}
 			
 		}catch(CampoVacioException e){
-			JOptionPane.showMessageDialog(null, "No ingreso el numero de la cuenta a cancelar", "Campo vacio", JOptionPane.WARNING_MESSAGE);
+			Aplication.mostrarMensaje("", AlertType.ERROR, "Campo vacío", "Error durante la transaccion",  "No ingreso el numero de la cuenta a cancelar", null);
 		}
 		limpiarCamposText();
 	}
@@ -165,12 +163,12 @@ public class ViewController {
 			}
 			else {
 				comando+=numeroBolsilloCuenta;
-//				aplicacion.realizarTransaccion(comando);
+				aplicacion.realizarTransaccion(comando);
 				
 			}
 			
 		}catch(CampoVacioException e){
-			JOptionPane.showMessageDialog(null, "No ingreso el numero de la cuenta para abrir el bolsillo", "Campo vacio", JOptionPane.WARNING_MESSAGE);
+			Aplication.mostrarMensaje("", AlertType.ERROR, "Campo vacío", "Error durante la transaccion",  "No ingreso el numero de la cuenta para abrir el bolsillo", null);
 		}
 		limpiarCamposText();
 	}
@@ -186,12 +184,12 @@ public class ViewController {
 			}
 			else {
 				comando+=numeroBolsilloCuenta;
-//				aplicacion.realizarTransaccion(comando);
+				aplicacion.realizarTransaccion(comando);
 				
 			}
 			
 		}catch(CampoVacioException e){
-			JOptionPane.showMessageDialog(null, "No ingreso el numero del bolsillo a cancelar", "Campo vacio", JOptionPane.WARNING_MESSAGE);
+			Aplication.mostrarMensaje("", AlertType.ERROR, "Campo vacío", "Error durante la transaccion",  "No ingreso el numero del bolsillo a cancelar", null);
 		}
 		limpiarCamposText();
 	}
@@ -212,7 +210,7 @@ public class ViewController {
 		try {
 			String numeroCuenta= numeroCT.getText();
 			String valor= valorT.getText();
-			if(numeroCuenta.equals("")&&valor.equals("")) {
+			if(numeroCuenta.equals("")||valor.equals("")) {
 				throw new CampoVacioException("No ingreso el numero de la cuenta o el valor a depositar");
 			}
 			else {
@@ -221,16 +219,16 @@ public class ViewController {
 				}
 				else {
 					comando+=numeroCuenta+","+valor;
-//					aplicacion.realizarTransaccion(comando);
+					aplicacion.realizarTransaccion(comando);
 				}
 				
 				
 			}
 			
 		}catch(CampoVacioException e){
-			JOptionPane.showMessageDialog(null, "No ingreso el numero de la cuenta o el valor a depositar", "Campo vacio", JOptionPane.WARNING_MESSAGE);
+			Aplication.mostrarMensaje("", AlertType.ERROR, "Campo vacío", "Error durante la transaccion",  "No ingreso el numero de la cuenta o el valor a depositar", null);
 		}catch(NumeroCuentaBolsilloException e) {
-			JOptionPane.showMessageDialog(null, "El numero que ingreso es de una cuenta de bolsillo", "Despositar solo es para cuentas de ahorros", JOptionPane.WARNING_MESSAGE);
+			Aplication.mostrarMensaje("", AlertType.ERROR, "Error en la transaccion", "Despositar solo es para cuentas de ahorros",  "El numero que ingreso es de una cuenta de bolsillo", null);
 		}
 		limpiarCamposText();
 	}
@@ -242,7 +240,7 @@ public class ViewController {
 		try {
 			String numeroCuenta= numeroCT.getText();
 			String valor= valorT.getText();
-			if(numeroCuenta.equals("")&&valor.equals("")) {
+			if(numeroCuenta.equals("")||valor.equals("")) {
 				throw new CampoVacioException("No ingreso el numero de la cuenta o el valor a retirar");
 			}
 			else {
@@ -251,16 +249,16 @@ public class ViewController {
 				}
 				else {
 					comando+=numeroCuenta+","+valor;
-//					aplicacion.realizarTransaccion(comando);
+					aplicacion.realizarTransaccion(comando);
 				}
 				
 				
 			}
 			
 		}catch(CampoVacioException e){
-			JOptionPane.showMessageDialog(null, "No ingreso el numero de la cuenta o el valor a retirar", "Campo vacio", JOptionPane.WARNING_MESSAGE);
+			Aplication.mostrarMensaje("", AlertType.ERROR, "Campo vacio", "Error durante la transaccion",  "No ingreso el numero de la cuenta o el valor a retirar", null);
 		}catch(NumeroCuentaBolsilloException e) {
-			JOptionPane.showMessageDialog(null, "El numero que ingreso es de una cuenta de bolsillo", "Retirar solo es para cuentas de ahorros", JOptionPane.WARNING_MESSAGE);
+			Aplication.mostrarMensaje("", AlertType.ERROR, "Error en la transaccion", "Retirar solo es para cuentas de ahorros",  "El numero que ingreso es de una cuenta de bolsillo", null);
 		}
 		limpiarCamposText();
 	}
@@ -270,28 +268,29 @@ public class ViewController {
 		
 		String comando="TRASLADAR,";
 		try {
-			String numeroBolsillo= numeroCT.getText();
+			String numeroCuenta= numeroCT.getText();
 			String valor= valorT.getText();
-			if(numeroBolsillo.equals("")&&valor.equals("")) {
+			if(numeroCuenta.equals("")||valor.equals("")) {
 				throw new CampoVacioException("No ingreso el numero del bolsillo o el valor a trasladar");
 			}
 			else {
-				if(numeroBolsillo.contains("b")==false) {
-					throw new NumeroCuentaBolsilloException("El numero que ingreso es de una cuenta de ahorros");
+				if(numeroCuenta.contains("b")==true) {
+					throw new NumeroCuentaBolsilloException("El numero que ingreso es de una cuenta de bolsillo");
 				}
 				else {
-					comando+=numeroBolsillo+","+valor;
-//					aplicacion.realizarTransaccion(comando);
+					comando+=numeroCuenta+","+valor;
+					aplicacion.realizarTransaccion(comando);
 				}
 				
 				
 			}
 			
 		}catch(CampoVacioException e){
-			JOptionPane.showMessageDialog(null, "No ingreso el numero del bolsillo o el valor a trasladar", "Campo vacio", JOptionPane.WARNING_MESSAGE);
+			Aplication.mostrarMensaje("", AlertType.ERROR, "Campo vacio", "Error durante la transaccion",  "No ingreso el numero del bolsillo o el valor a trasladar", null);
 		}catch(NumeroCuentaBolsilloException e) {
-			JOptionPane.showMessageDialog(null, "El numero que ingreso es de una cuenta de ahorros", "Trasladar solo es para bolsillos", JOptionPane.WARNING_MESSAGE);
+			Aplication.mostrarMensaje("", AlertType.ERROR, "Error en la transaccion", "Trasladar solo es para cuentas de ahorros",  "El numero que ingreso es de una cuenta de bolsillo", null);
 		}
+		
 		limpiarCamposText();
 	}
 	
@@ -311,17 +310,18 @@ public class ViewController {
 				}
 				else {
 					comando+=numero;
-//					aplicacion.realizarTransaccion(comando);
+					aplicacion.realizarTransaccion(comando);
 				}
 				
 				
 			}
 			
 		}catch(CampoVacioException e){
-			JOptionPane.showMessageDialog(null, "No ingreso el numero del bolsillo", "Campo vacio", JOptionPane.WARNING_MESSAGE);
+			Aplication.mostrarMensaje("", AlertType.ERROR, "Campo vacio", "Error durante la transaccion",  "No ingreso el numero del bolsillo", null);
 		}catch(NumeroCuentaBolsilloException e) {
-			JOptionPane.showMessageDialog(null, "El numero que ingreso es de una cuenta de ahorros", "Consultar bolsillo", JOptionPane.WARNING_MESSAGE);
+			Aplication.mostrarMensaje("", AlertType.ERROR, "Error en la transaccion", "Consultar bolsillo",  "El numero que ingreso es de una cuenta de ahorros", null);
 		}
+		
 		limpiarCamposText();
 	}
 	
@@ -341,17 +341,18 @@ public class ViewController {
 				}
 				else {
 					comando+=numero;
-//					aplicacion.realizarTransaccion(comando);
+					aplicacion.realizarTransaccion(comando);
 				}
 				
 				
 			}
 			
 		}catch(CampoVacioException e){
-			JOptionPane.showMessageDialog(null, "No ingreso el numero de la cuenta de ahorros", "Campo vacio", JOptionPane.WARNING_MESSAGE);
+			Aplication.mostrarMensaje("", AlertType.ERROR, "Campo vacio", "Error durante la transaccion",  "No ingreso el numero de la cuenta de ahorros", null);
 		}catch(NumeroCuentaBolsilloException e) {
-			JOptionPane.showMessageDialog(null, "El numero que ingreso es de un bolsillo", "Consultar cuenta de ahorros", JOptionPane.WARNING_MESSAGE);
+			Aplication.mostrarMensaje("", AlertType.ERROR, "Error en la transaccion", "Consultar cuenta de ahorros",  "El numero que ingreso es de un bolsillo", null);
 		}
+		
 		limpiarCamposText();
 	}
 	
@@ -377,7 +378,7 @@ public class ViewController {
 			}
 			
 		}catch(CampoVacioException e){
-			JOptionPane.showMessageDialog(null, "No ingreso el numero del bolsillo a cancelar", "Campo vacio", JOptionPane.WARNING_MESSAGE);
+			Aplication.mostrarMensaje("", AlertType.ERROR, "Campo vacio", "Error durante la transaccion",  "No ingreso el numero del bolsillo a cancelar", null);
 		}
 		limpiarCamposText();
 	}
