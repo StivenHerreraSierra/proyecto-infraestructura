@@ -93,7 +93,7 @@
             <JFXTextField fx:id="numeroCancelarBB" focusColor="#fa2c56" layoutX="22.0" layoutY="304.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite el numero del bolsillo" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="AnchorTransaction" layoutX="190.0" prefHeight="500.0" prefWidth="315.0" style="-fx-background-color: #140b21;" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+      <AnchorPane fx:id="AnchorTransaction" layoutX="190.0" prefHeight="500.0" prefWidth="315.0" style="-fx-background-color: #140b21;" visible="false" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
          <children>
             <Pane layoutX="14.0" layoutY="147.0" opacity="0.5" prefHeight="161.0" prefWidth="245.0" rotate="29.5" style="-fx-background-color: #FA2C56; -fx-background-radius: 20;" AnchorPane.bottomAnchor="169.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="170.0">
                <effect>
@@ -106,12 +106,12 @@
                </font>
             </Label>
             <Separator layoutX="15.0" layoutY="74.0" prefHeight="1.0" prefWidth="283.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
-            <Label layoutX="15.0" layoutY="91.0" text="Ingresar numero de cuenta o bolsillo:" textFill="WHITE" AnchorPane.leftAnchor="15.0">
+            <Label layoutX="15.0" layoutY="91.0" text="Ingresar numero de cuenta:" textFill="WHITE" AnchorPane.leftAnchor="15.0">
                <font>
                   <Font name="Monospaced Italic" size="13.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="numeroCT" focusColor="#fa2c56" layoutX="15.0" layoutY="118.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite el numero de la cuenta o bolsillo" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <JFXTextField fx:id="numeroCT" focusColor="#fa2c56" layoutX="15.0" layoutY="118.0" prefHeight="25.0" prefWidth="273.0" promptText="Digite el numero de la cuenta" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
             <Label layoutX="15.0" layoutY="266.0" text="Consultar Saldo" textFill="#fa2c56" AnchorPane.leftAnchor="15.0">
                <font>
                   <Font name="Monospaced Bold Italic" size="15.0" />
@@ -130,16 +130,11 @@
                </font>
             </Label>
             <JFXTextField fx:id="valorT" focusColor="#fa2c56" layoutX="158.0" layoutY="158.0" prefHeight="25.0" prefWidth="145.0" promptText="\$" style="-fx-text-fill: white;" unFocusColor="WHITE" AnchorPane.rightAnchor="15.0" />
-            <JFXButton layoutX="235.0" layoutY="236.0" onAction="#depositar" style="-fx-background-color: white;" text="Depositar" AnchorPane.rightAnchor="15.0" />
-            <JFXButton layoutX="177.0" layoutY="236.0" onAction="#retirar" style="-fx-background-color: white;" text="Retirar" AnchorPane.rightAnchor="87.0" />
-            <JFXButton layoutX="15.0" layoutY="236.0" onAction="#trasladar" style="-fx-background-color: white;" text="Trasladar" AnchorPane.rightAnchor="235.0" />
+            <JFXButton layoutX="235.0" layoutY="211.0" onAction="#depositar" style="-fx-background-color: white;" text="Depositar" AnchorPane.rightAnchor="15.0" />
+            <JFXButton layoutX="177.0" layoutY="211.0" onAction="#retirar" style="-fx-background-color: white;" text="Retirar" AnchorPane.rightAnchor="95.0" />
+            <JFXButton layoutX="102.0" layoutY="211.0" onAction="#trasladar" style="-fx-background-color: white;" text="Trasladar" AnchorPane.rightAnchor="160.0" />
             <JFXButton layoutX="70.0" layoutY="371.0" onAction="#consultarCuentaBolsillo" style="-fx-background-color: white;" text="Consultar saldo del bolsillo de la cuenta" AnchorPane.rightAnchor="15.0" />
             <JFXButton layoutX="133.0" layoutY="409.0" onAction="#consultarCuentaAhorros" style="-fx-background-color: white;" text="Consultar saldo de la cuenta" AnchorPane.rightAnchor="15.0" />
-            <Label layoutX="12.0" layoutY="204.0" prefHeight="15.0" prefWidth="283.0" text="Nota: Trasladar solo es para bolsillos." textFill="WHITE">
-               <font>
-                  <Font name="Monospaced Italic" size="12.0" />
-               </font>
-            </Label>
          </children>
          <effect>
             <DropShadow />
@@ -279,17 +274,17 @@
             <DropShadow />
          </effect>
       </AnchorPane>
-      <Pane fx:id="logo1" layoutX="225.0" layoutY="146.0" opacity="0.5" prefHeight="161.0" prefWidth="245.0" rotate="29.5" style="-fx-background-color: #FA2C56; -fx-background-radius: 20;" visible="false" AnchorPane.bottomAnchor="169.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="170.0">
+      <Pane fx:id="logo1" layoutX="225.0" layoutY="146.0" opacity="0.5" prefHeight="161.0" prefWidth="245.0" rotate="29.5" style="-fx-background-color: #FA2C56; -fx-background-radius: 20;" AnchorPane.bottomAnchor="169.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="170.0">
          <effect>
             <DropShadow />
          </effect>
       </Pane>
-      <ImageView fx:id="logo2" fitHeight="150.0" fitWidth="200.0" layoutX="273.0" layoutY="175.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.bottomAnchor="175.0" AnchorPane.topAnchor="175.0">
+      <ImageView fx:id="logo2" fitHeight="150.0" fitWidth="200.0" layoutX="273.0" layoutY="175.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="175.0" AnchorPane.topAnchor="175.0">
          <image>
             <Image url="@../icons/us_dollar_64px.png" />
          </image>
       </ImageView>
-      <Label fx:id="logo3" layoutX="217.0" layoutY="197.0" text="Bank" textFill="#140b21" visible="false">
+      <Label fx:id="logo3" layoutX="217.0" layoutY="197.0" text="Bank" textFill="#140b21">
          <font>
             <Font name="Algerian" size="96.0" />
          </font>
