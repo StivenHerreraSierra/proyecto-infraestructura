@@ -35,6 +35,7 @@ public class Aplication extends Application{
 		this.primaryStage.setTitle("Banco");
 		initRootLayout();
 		showPersonOverview();
+		primaryStage.setResizable(false);
 		
 		primaryStage.setOnCloseRequest(event -> {if(cliente != null)
 			try {
@@ -93,10 +94,11 @@ public class Aplication extends Application{
 	}
 	
 	public void mostrarResultado(String mensaje, boolean terminadaExito) {
+		String mensajeMultilinea = mensaje.replace(" - ", "\n");
 		if(terminadaExito)
-			mostrarMensaje("", AlertType.INFORMATION, "Resultado de transaccion", "", "Informe de la solicitud de la transaccion: " + mensaje, null);
+			mostrarMensaje("", AlertType.INFORMATION, "Resultado de transaccion", "Informe de la solicitud de la transaccion", mensajeMultilinea, null);
 		else
-			mostrarMensaje("", AlertType.ERROR, "Error de transaccion", "", "Error durante la solicitud de la transaccion: " + mensaje, null);
+			mostrarMensaje("", AlertType.ERROR, "Error de transaccion", "Error durante la solicitud de la transaccion", mensajeMultilinea, null);
 	}
 
 	public static void mostrarMensaje(String mensaje, AlertType miA, String titulo, String cabecera, String contenido, Stage escenarioPrincipal )
